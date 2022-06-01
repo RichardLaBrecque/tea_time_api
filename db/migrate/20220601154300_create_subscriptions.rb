@@ -4,7 +4,7 @@ class CreateSubscriptions < ActiveRecord::Migration[5.2]
       t.string :title
       t.integer :price
       t.integer :status, default: 0
-      t.integer :frequency, default: 0
+      t.integer :frequency
 
       t.timestamps
     end
