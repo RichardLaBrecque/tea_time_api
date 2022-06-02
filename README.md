@@ -1,24 +1,26 @@
-# README
+# Tea Time API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+The tea_time_api is a a backend Rails API. Currently there are 3 active endpoints.  These endpoints allow a customer to do the following
+* subscribe to a tea
+* cancel a tea subscription
+* view all of a customers subscriptions, both active and canceled
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Gemfile
+* faraday
+* jsonapi-serializer
+* simplecov
+* capybara
+* rspec-rails
+* shoulda-matchers
+### Setup
+ Fork and clone this repo
+ once cloned down
+ using terminal
+ * `cd` into the new directory
+ * run `gem install bundler`
+ * if bundler is already installed locally run `bundle install` to install required gems
+ * once completed run `rails db:create` to create your Postgresql database
+ * run `rails db:migrate` to run the migrations and set up the tables required
+ * run `rails s` to spin up the local server and start playing around!
+ ## ENDPOINTS
