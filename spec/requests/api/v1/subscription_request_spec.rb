@@ -69,9 +69,9 @@ RSpec.describe 'subscriptions requests' do
                           price: tea_2.price,
                           title: "A second trial of tea",
                           frequency: 0)
-      data = {'subscription': sub_1.id, status_change: "cancel"}
+      data = {status_change: "cancel"}
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
-      put "/api/v1/customers/#{user.id}/subscriptions", headers: headers, params: JSON.generate(data)
+      put "/api/v1/customers/#{user.id}/subscriptions/#{sub_1.id}", headers: headers, params: JSON.generate(data)
       subs = JSON.parse(response.body, symbolize_names: true)
       expect(subs).to be_a Hash
       expect(subs).to have_key(:data)

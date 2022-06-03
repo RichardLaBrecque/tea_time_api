@@ -3,8 +3,6 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :customers do
         resources :subscriptions
-        #ask WHY NOT DO THE THING
-        put '/subscriptions', to: 'subscriptions#update'
       end
     end
   end
